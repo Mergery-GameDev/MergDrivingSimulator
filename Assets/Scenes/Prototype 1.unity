@@ -9825,8 +9825,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forwardSpeed: 20
   turnSpeed: 5
-  mainCamera: {fileID: 0}
-  driverCamera: {fileID: 0}
+  mainCamera: {fileID: 534669904}
+  driverCamera: {fileID: 1753130336}
+  switchCameraKey: 32
 --- !u!54 &1436158548
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -11474,7 +11475,7 @@ Camera:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1753130334}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}

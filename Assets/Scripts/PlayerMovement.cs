@@ -6,12 +6,14 @@ public class PlayerMovement : MonoBehaviour
 {
     public float forwardSpeed= 15.0f;
     public float turnSpeed = 10.0f;
-    public GameObject mainCamera;
-    public GameObject driverCamera;
+    public Camera mainCamera;
+    public Camera driverCamera;
+    public KeyCode switchCameraKey= KeyCode.Space;
 
     // Start is called before the first frame update
     void Start()
     {
+        //switchCameraKey= Input.GetKeyDown(KeyCode.Space);
         
     }
 
@@ -27,11 +29,11 @@ public class PlayerMovement : MonoBehaviour
         // TURN MOVEMENT 
         transform.Rotate(Vector3.up * turnSpeed * Time.deltaTime * horizontalInput);
 
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(switchCameraKey))
         {
-        
+            mainCamera.enabled = !mainCamera.enabled;
+            driverCamera.enabled= !driverCamera.enabled;
         }
-
 
 
     }
